@@ -1,0 +1,42 @@
+﻿
+@{
+    ViewData["Title"] = "Area";
+}
+
+<h1>Area</h1>
+<form method="post">
+    <label>select shape for which you want to calculate area</label>
+    <input 
+           type="radio" 
+           name="ShapeType" 
+           value="circle" />Circle<br/>
+    <input 
+           type="radio" 
+           name="ShapeType"            
+           value="rectangle" />Rectangle<br />
+
+    <div id="circle">
+        <label>Radius</label>
+        <input type="text" id="txtRadius" name="Radius" />
+    </div>
+
+
+    <div id="rectangle">
+        <label>Length</label>
+        <input type="text" id="txtLength" name="Length" />
+
+        <label>Width</label>
+        <input type="text" id="txtWidth" name="Width" />
+    </div>
+
+
+    <div>
+
+        <input type="submit"
+               name="area"
+               class="btn btn-primary"
+               value="Calculate Area"
+               formmethod="post"
+               formaction=@Url.Action("Calculate") />
+    </div>
+</form>
