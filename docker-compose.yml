@@ -8,6 +8,8 @@ services:
       dockerfile: Dockerfile
     ports:
       - "51789:80"
+    links:
+      - calculatorapi
     environment:
       - ADMIN_API_URL=http://calculatorapi
     networks: 
