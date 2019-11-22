@@ -4,7 +4,7 @@ pipeline {
     stage('Build') {
         steps{
             script{
-                sh 'cd "${env.WORKSPACE}" && sudo docker-compose up'
+                sh 'sudo docker-compose up -f ./docker-compose.yml'
             }
             
         }
