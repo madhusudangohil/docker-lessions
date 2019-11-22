@@ -6,7 +6,7 @@ pipeline {
             script{
                 sh 'pwd'
                 sh 'ls -l'
-                sh '/snap/bin/docker-compose -f docker-compose.yml up'
+                sh 'sudo docker-compose -f "${pwd}/docker-compose.yml" up'
             }
             
         }
