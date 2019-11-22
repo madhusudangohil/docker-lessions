@@ -6,7 +6,7 @@ pipeline {
             script{
                 sh 'pwd'
                 sh 'ls -l'
-                sh 'sudo docker-compose -f "${pwd}/docker-compose.yml" up'
+                sh 'docker-compose -f "/var/lib/jenkins/workspace/dockerLessions_master/docker-compose.yml" up'
             }
             
         }
