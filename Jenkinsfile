@@ -4,7 +4,9 @@ pipeline {
     stage('Build') {
         steps{
             script{
-                sh 'sudo docker-compose -f ./docker-compose.yml up'
+                sh 'pwd'
+                sh 'ls -l'
+                sh 'sudo docker-compose -f docker-compose.yml up'
             }
             
         }
